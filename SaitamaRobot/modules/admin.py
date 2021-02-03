@@ -37,14 +37,14 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if not (promoter.can_promote_members or
             promoter.status == "creator") and not user.id in DRAGONS:
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("Oops! You don't have the necessary rights to do that!")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "Bruh, you don't seem to be referring to a user or the ID specified is incorrect.."
         )
         return
 
@@ -55,12 +55,12 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'administrator' or user_member.status == 'creator':
         message.reply_text(
-            "How am I meant to promote someone that's already an admin?")
+            "Wah! How am I meant to promote someone that's already an admin?")
         return
 
     if user_id == bot.id:
         message.reply_text(
-            "I can't promote myself! Get an admin to do it for me.")
+            "Sorry, I can't promote myself! Get an admin to do it for me.")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -118,7 +118,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "Oops! You don't seem to be referring to a user or the ID specified is incorrect.."
         )
         return
 
@@ -129,11 +129,11 @@ def demote(update: Update, context: CallbackContext) -> str:
 
     if user_member.status == 'creator':
         message.reply_text(
-            "This person CREATED the chat, how would I demote them?")
+            "This person CREATED the chat, how would I demote them? He is higher than uh!!!!")
         return
 
     if not user_member.status == 'administrator':
-        message.reply_text("Can't demote what wasn't promoted!")
+        message.reply_text("Can't demote who wasn't promoted! ^_^")
         return
 
     if user_id == bot.id:
@@ -156,7 +156,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"Duh! Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
             parse_mode=ParseMode.HTML)
 
         log_message = (
@@ -170,7 +170,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     except BadRequest:
         message.reply_text(
             "Could not demote. I might not be admin, or the admin status was appointed by another"
-            " user, so I can't act upon them!")
+            " user, so I can't act upon them ◑﹏◐!")
         return
 
 
@@ -205,13 +205,13 @@ def set_title(update: Update, context: CallbackContext):
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect.."
+            "You don't seem to be referring to a user or the ID specified is incorrect 🙄🙄"
         )
         return
 
     if user_member.status == 'creator':
         message.reply_text(
-            "This person CREATED the chat, how can i set custom title for him?")
+            "This person CREATED the chat, how can i set custom title for him? (❁´◡`❁)")
         return
 
     if not user_member.status == 'administrator':
@@ -227,7 +227,7 @@ def set_title(update: Update, context: CallbackContext):
         return
 
     if not title:
-        message.reply_text("Setting blank title doesn't do anything!")
+        message.reply_text("Setting blank title doesn't do anything!(⊙_⊙;)")
         return
 
     if len(title) > 16:
