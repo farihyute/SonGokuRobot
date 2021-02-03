@@ -55,7 +55,7 @@ def ban(update: Update, context: CallbackContext) -> str:
                 "Trying to put me against a God level disaster huh?")
             return log_message
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our own.")
+            message.reply_text("Bruh, I can't act against our own.")
             return log_message
         elif user_id in DRAGONS:
             message.reply_text(
@@ -63,12 +63,12 @@ def ban(update: Update, context: CallbackContext) -> str:
             return log_message
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Demon disaster."
+                "Bring an order from Dragon Ball Chat to fight a Demon disaster."
             )
             return log_message
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Tiger disaster."
+                "Bring an order from dRAGON ball chat to fight a Tiger disaster."
             )
             return log_message
         elif user_id in WOLVES:
@@ -142,7 +142,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
             raise
 
     if user_id == bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy?")
+        message.reply_text("I'm not gonna BAN myself, are you crazy? Why do you think that I will ban myself??? I like this group sooo much. Not gonna ban myself.")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member):
@@ -150,7 +150,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     if not reason:
-        message.reply_text("You haven't specified a time to ban this user for!")
+        message.reply_text("You haven't specified a time to ban this user for!(⊙_⊙)？")
         return log_message
 
     split_reason = reason.split(None, 1)
@@ -359,7 +359,7 @@ def selfunban(context: CallbackContext, update: Update) -> str:
             raise
 
     if is_user_in_chat(chat, user.id):
-        message.reply_text("Aren't you already in the chat??")
+        message.reply_text("Aren't you already in the chat?!")
         return
 
     chat.unban_member(user.id)
