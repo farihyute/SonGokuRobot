@@ -101,7 +101,7 @@ def check_flood(update, context) -> str:
 
     except BadRequest:
         msg.reply_text(
-            "I can't restrict people here, give me permissions first! Until then, I'll disable anti-flood."
+            "I can't restrict people here, give me permissions first! Until then, I'll disable anti-flood, okay?"
         )
         sql.set_flood(chat.id, 0)
         return (
