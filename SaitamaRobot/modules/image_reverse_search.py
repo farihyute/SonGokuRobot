@@ -71,7 +71,7 @@ def reverse(update: Update, context:CallbackContext):
                 msg.reply_text("Image not found.")
                 return
             elif HE.reason == 'Forbidden':
-                msg.reply_text("Couldn't access the provided link, The website might have blocked accessing to the website by bot or the website does not existed.")
+                msg.reply_text("Couldn't access the provided link, The website might have blocked accessing to the website by bot or the website does not existed. ¯\(°_o)/¯")
                 return
         except URLError as UE:
             msg.reply_text(f"{UE.reason}")
