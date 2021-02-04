@@ -19,7 +19,7 @@ from telegram.utils.helpers import mention_html
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
     if not user_id:
-        reply = "You don't seem to be referring to a user or the ID specified is incorrect.."
+        reply = "You don't seem to be referring to a user or the ID specified is incorrect... Duh ＞﹏＜"
         return reply
 
     try:
@@ -102,7 +102,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "You'll need to either give me a username to unmute, or reply to someone to be unmuted."
+            "You'll need to either give me a username to unmute, or reply to someone to be unmuted, ok?"
         )
         return ""
 
@@ -141,7 +141,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
     else:
         message.reply_text(
             "This user isn't even in the chat, unmuting them won't make them talk more than they "
-            "already do!")
+            "already do!→_→")
 
     return ""
 
