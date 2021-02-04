@@ -40,7 +40,7 @@ def ban(update: Update, context: CallbackContext) -> str:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("Can't seem to find this person.")
+            message.reply_text("Can't seem to find this person.😐😶")
             return log_message
         else:
             raise
