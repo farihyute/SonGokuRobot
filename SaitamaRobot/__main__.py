@@ -77,10 +77,10 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/03037bef46d4c3568af49.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/4cf0562f41d06c365eb8a.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Senku is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
+Son Goku is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Paul
 There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
 
@@ -205,21 +205,21 @@ def start(update: Update, context: CallbackContext):
                                 context.bot.username)),
                          InlineKeyboardButton(
                              text=" 🔔 Updates ",
-                             url="https://t.me/LuffyUpdates")
+                             url="https://t.me/Goku_Updates")
                      ],
                      [
                         InlineKeyboardButton(
                             text=" ✨ Help ",
-                            url="https://t.me/MonkeyDLuffy_Robot?start=help"),
+                            url="https://t.me/SonGokuRobot?start=help"),
                          InlineKeyboardButton(
                             text=" ⚡️ Get Started ",
-                             url="https://t.me/LuffyUpdates/7")        
+                             url="https://t.me/Goku_UpdatesUpdates/7")        
                        
                      ],
                      [
                         InlineKeyboardButton(
                              text=" ❤️ Source Code ",
-                             url="https://github.com/Telegram-Friend/LuffyRobot")
+                             url="https://github.com/Telegram-Friend/SonGokuRobot")
                     
                     ]]))
     else:
