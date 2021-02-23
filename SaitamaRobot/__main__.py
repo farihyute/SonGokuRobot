@@ -51,24 +51,24 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot.
-Build by weebs for weebs, I specialize in managing anime and similar themed groups.
+Hi {}, my name is Gojou! 
+I am An Anime Manager Group.
+I am A Teacher On Jujutsu School.
 You can find my list of available commands with /help.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm Son Goku & I help admins to manage their groups! Have a look at the following for an idea of some of \
+Hey there! My name is Gojou!.
+I'm Jujutsu Magician & I help admins to manage their groups! Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+  ⚪/help: PM's you this message.
+  ⚪/help <module name>: PM's you info about that module.
+  ⚪/donate: information on how to donate!
+  ⚪/settings:
+   ⚪ in PM: will send you your settings for all supported modules.
+   ⚪ in a group: will redirect you to pm, with all that chat's settings.
 
 
 {}
@@ -77,7 +77,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/4cf0562f41d06c365eb8a.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/481d5489030d4c9a48fa2.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Son Goku is hosted on one of Heroku's Servers and doesn't require any donations as of now but \
@@ -200,31 +200,31 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text=" Add me ↗ ",
+                            text=" Add Gojou ↗ ",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
                          InlineKeyboardButton(
-                             text=" 🔔 Updates ",
-                             url="https://t.me/Goku_Updates")
+                             text=" 📢 Support ",
+                             url="https://t.me/JujutsuUnionSupport")
                      ],
                      [
                         InlineKeyboardButton(
                             text=" ✨ Help ",
-                            url="https://t.me/SonGokuRobot?start=help"),
+                            url="https://t.me/GojouSatoruRobot?start=help"),
                          InlineKeyboardButton(
-                            text=" ⚡️ Get Started ",
-                             url="https://t.me/Goku_Updates/7")        
+                            text=" ➡️ Get Started ",
+                             url="https://t.me/JujutsuUnionSupport/4")        
                        
                      ],
                      [
                         InlineKeyboardButton(
-                             text=" ❤️ Source Code ",
-                             url="https://github.com/Telegram-Friend/SonGokuRobot")
+                             text=" 💬 Join My Group ",
+                             url="https://t.me/JujutsuUnion")
                     
                     ]]))
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
+            "Yo,I'm Here"
             .format(uptime),
             parse_mode=ParseMode.HTML)
 
@@ -279,7 +279,7 @@ def help_button(update, context):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="Back", callback_data="help_back")
+                        text="バック", callback_data="help_back")
                 ]]))
 
         elif prev_match:
@@ -327,7 +327,7 @@ def get_help(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
                         text="Help",
-                        url="t.me/{}?start=ghelp_{}".format(
+                        url="t.me/GojouSatoruRobot?start=ghelp_{}".format(
                             context.bot.username, module))
                 ]]))
             return
@@ -335,8 +335,8 @@ def get_help(update: Update, context: CallbackContext):
             "Contact me in PM to get the list of possible commands.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="Help",
-                    url="t.me/{}?start=help".format(context.bot.username))
+                    text="助けて",
+                    url="t.me/GojouSatoruRobot?start=help".format(context.bot.username))
             ]]))
         return
 
